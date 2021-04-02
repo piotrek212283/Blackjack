@@ -7,19 +7,19 @@ class Pocket:
         return ("Account balance : %d" % self.balance)
 
     def deposit(self, amount):
-        if (type(amount) == int and amount > 0):
+        if (type(amount) == float and amount > 0):
             self.balance += amount
+            return True
         else:
-            pass
+            return False
     
     def withdraw(self, amount):
-        if (type(amount) == int and amount > 0):
+        if (type(amount) == float and amount > 0):
             if self.balance - amount >= 0:
                 self.balance -= amount
-            else:
-                pass
+                return True
         else:
-            pass
+            return False
 
     
 

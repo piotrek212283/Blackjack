@@ -23,5 +23,15 @@ class Player:
 
     def cards_sum(self):
         sum = 0
-        for i in range(self.player_cards):
+        for i in range(len(self.player_cards)):
             sum += self.player_cards[i].value
+
+        return sum
+    
+    def make_bet(self, money):
+        return self.player_pocket.withdraw(money)
+
+    def flush_cards(self):
+        self.player_cards.clear()
+
+
