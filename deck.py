@@ -21,7 +21,7 @@ class Deck:
         random.shuffle(self.all_cards)
 
     def return_one(self):
-        return self.all_cards.pop(0)
+        return self.all_cards.pop(-1)
 
     
     
